@@ -1,0 +1,36 @@
+{
+    "name": "zeevin/cmbpayments",
+    "description": "招商银行一网通支付SDK",
+    "keywords": [
+      "招行",
+      "招行一网通",
+      "cmb"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CaoKang",
+            "email": "caokang@outlook.com",
+            "homepage": "https://www.init.lu"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-json":"*",
+        "guzzlehttp/guzzle": "~6.0",
+        "pimple/pimple": "^3.0",
+        "symfony/http-foundation": "^2.7|^3.0|^4.0",
+        "symfony/psr-http-message-bridge": "^0.3|^1.0",
+        "dusank/knapsack": "^10.0",
+        "doctrine/cache": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zeevin\\CmbPayments\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    }
+}
