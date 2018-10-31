@@ -14,6 +14,7 @@ namespace Zeevin\CmbPayments\Mobile\Refund;
 use Zeevin\CmbPayments\Kernel\BaseClient;
 use Zeevin\CmbPayments\Kernel\Object\Refund\DoRefund;
 use Zeevin\CmbPayments\Kernel\Object\Refund\QueryByDate;
+use Zeevin\CmbPayments\Kernel\Object\Refund\QuerySettled;
 use Zeevin\CmbPayments\Kernel\Support\RC4;
 
 class Client extends BaseClient
@@ -39,5 +40,10 @@ class Client extends BaseClient
 
             return $this->request('refund.queryByDate',$reqData->prepare());
         }
+    }
+
+    public function querySettled(QuerySettled $reqData)
+    {
+        return $this->request('refund.querySettled',$reqData->prepare());
     }
 }
