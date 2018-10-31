@@ -13,6 +13,7 @@ namespace Zeevin\CmbPayments\Mobile\Refund;
 
 use Zeevin\CmbPayments\Kernel\BaseClient;
 use Zeevin\CmbPayments\Kernel\Object\Refund\DoRefund;
+use Zeevin\CmbPayments\Kernel\Object\Refund\QueryByDate;
 use Zeevin\CmbPayments\Kernel\Support\RC4;
 
 class Client extends BaseClient
@@ -29,8 +30,14 @@ class Client extends BaseClient
         return $this->request('refund.do',$reqData->prepare());
     }
 
-    public function queryByOrderNo()
+    public function queryByDate(QueryByDate $reqData)
     {
+        if (!$reqData->getOperatorNo())
+        {
+            $config_cmb = $this->config->get('cmb');
+            $reqData->setOperatorNo($config_cmb['operatorNo']);
 
+            return $this->request('refund.queryByDate',$reqData->prepare());
+        }
     }
 }
