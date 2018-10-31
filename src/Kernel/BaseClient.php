@@ -49,6 +49,7 @@ Abstract class BaseClient
             'sign'=>$this->signature($reqData),
             'reqData'=>$reqData
         ]);
+//        echo $body;exit;
         if ($this->isRedirect())
             $content =  $this->redirectPost($endpoint,$body);
         else
