@@ -13,7 +13,7 @@ namespace Zeevin\CmbPayments\Kernel\Object\Order;
 
 use Zeevin\CmbPayments\Kernel\Traits\RequestAttributes;
 
-class Query
+class QuerySingle
 {
     protected $dateTime;
     protected $branchNo;
@@ -57,7 +57,7 @@ class Query
     /**
      * @param mixed $branchNo
      *
-     * @return Query
+     * @return QuerySingle
      */
     public function setBranchNo($branchNo)
     {
@@ -77,7 +77,7 @@ class Query
     /**
      * @param mixed $merchantNo
      *
-     * @return Query
+     * @return QuerySingle
      */
     public function setMerchantNo($merchantNo)
     {
@@ -97,9 +97,9 @@ class Query
     /**
      * @param string $type
      *
-     * @return Query
+     * @return QuerySingle
      */
-    public function setType(string $type): Query
+    public function setType(string $type): QuerySingle
     {
         $this->type = $type;
 
@@ -117,7 +117,7 @@ class Query
     /**
      * @param mixed $bankSerialNo
      *
-     * @return Query
+     * @return QuerySingle
      */
     public function setBankSerialNo($bankSerialNo)
     {
@@ -137,7 +137,7 @@ class Query
     /**
      * @param mixed $date
      *
-     * @return Query
+     * @return QuerySingle
      */
     public function setDate($date)
     {
@@ -157,7 +157,7 @@ class Query
     /**
      * @param mixed $orderNo
      *
-     * @return Query
+     * @return QuerySingle
      */
     public function setOrderNo($orderNo)
     {
@@ -177,7 +177,7 @@ class Query
     /**
      * @param mixed $operatorNo
      *
-     * @return Query
+     * @return QuerySingle
      */
     public function setOperatorNo($operatorNo)
     {

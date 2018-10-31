@@ -8,12 +8,12 @@
  * Project: cmbpayments
  */
 
-namespace Zeevin\CmbPayments\Kernel\Object\Order;
+namespace Zeevin\CmbPayments\Kernel\Object\Refund;
 
 
 use Zeevin\CmbPayments\Kernel\Traits\RequestAttributes;
 
-class Refund
+class DoRefund
 {
     protected $dateTime;
     protected $branchNo;
@@ -60,7 +60,7 @@ class Refund
     /**
      * @param mixed $branchNo
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setBranchNo($branchNo)
     {
@@ -80,7 +80,7 @@ class Refund
     /**
      * @param mixed $merchantNo
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setMerchantNo($merchantNo)
     {
@@ -100,7 +100,7 @@ class Refund
     /**
      * @param mixed $date
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setDate($date)
     {
@@ -120,7 +120,7 @@ class Refund
     /**
      * @param mixed $orderNo
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setOrderNo($orderNo)
     {
@@ -140,7 +140,7 @@ class Refund
     /**
      * @param mixed $refundSerialNo
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setRefundSerialNo($refundSerialNo)
     {
@@ -160,7 +160,7 @@ class Refund
     /**
      * @param mixed $amount
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setAmount($amount)
     {
@@ -180,7 +180,7 @@ class Refund
     /**
      * @param mixed $desc
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setDesc($desc)
     {
@@ -200,7 +200,7 @@ class Refund
     /**
      * @param mixed $operatorNo
      *
-     * @return Refund
+     * @return DoRefund
      */
     public function setOperatorNo($operatorNo)
     {
@@ -220,9 +220,9 @@ class Refund
     /**
      * @param string $encrypType
      *
-     * @return Refund
+     * @return DoRefund
      */
-    public function setEncrypType(string $encrypType): Refund
+    public function setEncrypType(string $encrypType): DoRefund
     {
         $this->encrypType = $encrypType;
 

@@ -23,5 +23,6 @@ class Application extends ServiceContainer
             Agreement\ServiceProvider::class,
             Pubkey\ServiceProvider::class,
             Order\ServiceProvider::class,
+            Refund\ServiceProvider::class
         ];
 }

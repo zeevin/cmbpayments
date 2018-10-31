@@ -13,9 +13,8 @@ namespace Zeevin\CmbPayments\Mobile\Order;
 
 use Zeevin\CmbPayments\Kernel\BaseClient;
 use Zeevin\CmbPayments\Kernel\Object\Order\Pay;
-use Zeevin\CmbPayments\Kernel\Object\Order\Query;
+use Zeevin\CmbPayments\Kernel\Object\Order\QuerySingle;
 use Zeevin\CmbPayments\Kernel\Object\Order\Refund;
-use Zeevin\CmbPayments\Kernel\Support\RC4;
 
 class Client extends BaseClient
 {
@@ -25,20 +24,9 @@ class Client extends BaseClient
         return $this->request('order.pay',$reqData->prepare());
     }
 
-    public function query(Query $reqData)
+    public function querySingle(QuerySingle $reqData)
     {
-        return $this->request('order.query',$reqData->prepare());
+        return $this->request('order.querySingle',$reqData->prepare());
     }
 
-    public function refund(Refund $reqData)
-    {
-        $config_cmb = $this->config->get('cmb');
-        if (!$reqData->getPwd())
-            $reqData->setPwd(RC4::encrypt($config_cmb['operatorPwd'],$config_cmb['privateKey']));
-
-
-        if (!$reqData->getOperatorNo())
-            $reqData->setOperatorNo($config_cmb['operatorNo']);
-        return $this->request('order.refund',$reqData->prepare());
-    }
 }
