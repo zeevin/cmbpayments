@@ -16,6 +16,8 @@ $app = Factory::mobile($config);
 
 $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Order\Pay();
 $reqDataObject->setDateTime()->setDate()->setOrderNo('P'.date('YmdHis').random_int(1000,9999))
-    ->setAmount('0.01')->setPayNoticeUrl('https://iot.init.lu/back.php')->setAgrNo('1631');
+    ->setMobile('18000010000')
+    ->setAmount('1')->setPayNoticeUrl('http://47.98.159.146/back.php')->setAgrNo('11572')
+    ->setMerchantSerialNo('AG163311')->setSignNoticeUrl('http://47.98.159.146/back.php');
 
 echo $app->order->pay($reqDataObject);

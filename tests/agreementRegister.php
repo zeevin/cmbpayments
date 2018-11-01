@@ -23,7 +23,7 @@ $data = $reqDataObject
     ->setAgrNo('1631') //163:20181024
     ->setUserID('163')
     ->setRiskLevel('3')
-    ->setNoticeUrl('https://iot.init.lu/back.php');
+    ->setNoticeUrl('http://47.98.159.146/back.php');
 
 echo $app->agreement->register($data);
 

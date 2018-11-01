@@ -12,6 +12,7 @@ namespace Zeevin\CmbPayments\Mobile\Agreement;
 
 
 use Zeevin\CmbPayments\Kernel\BaseClient;
+use Zeevin\CmbPayments\Kernel\Object\Agreement\Cancel;
 use Zeevin\CmbPayments\Kernel\Object\Agreement\Query;
 use Zeevin\CmbPayments\Kernel\Object\Agreement\Register;
 
@@ -27,5 +28,10 @@ class Client extends BaseClient
     public function query(Query $reqData)
     {
         return $this->request('agreement.query',$reqData->prepare());
+    }
+
+    public function cancel(Cancel $reqData)
+    {
+        return $this->request('agreement.cancel',$reqData->prepare());
     }
 }

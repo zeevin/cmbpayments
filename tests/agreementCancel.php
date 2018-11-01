@@ -2,9 +2,9 @@
 /**
  * @link   https://www.init.lu
  * @author Cao Kang(caokang@outlook.com)
- * Date: 2018/10/25
- * Time: 7:25 PM
- * Source: queryAgreement.php
+ * Date: 2018/10/23
+ * Time: 10:44 AM
+ * Source: register.php
  * Project: cmbpayments
  */
 
@@ -14,11 +14,11 @@ $config = require './config.php';
 use Zeevin\CmbPayments\Factory;
 $app = Factory::mobile($config);
 
-$reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Agreement\Query();
+$reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Agreement\Cancel();
 
 $reqDataObject->setMerchantSerialNo('Q'.random_int(10000000,99999999))
     ->setDateTime()
-    ->setAgrNo('1632');
+    ->setAgrNo('572');
 
-$ret =  $app->agreement->query($reqDataObject);
+$ret =  $app->agreement->cancel($reqDataObject);
 print_r($ret);
