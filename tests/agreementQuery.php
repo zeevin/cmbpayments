@@ -18,7 +18,7 @@ $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Agreement\Query();
 
 $reqDataObject->setMerchantSerialNo('Q'.random_int(10000000,99999999))
     ->setDateTime()
-    ->setAgrNo('1632');
+    ->setAgrNo('16320099');
 
 $ret =  $app->agreement->query($reqDataObject);
 print_r($ret);

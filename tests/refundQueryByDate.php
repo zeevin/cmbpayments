@@ -15,6 +15,6 @@ use Zeevin\CmbPayments\Factory;
 $app = Factory::mobile($config);
 
 $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Refund\QueryByDate();
-$reqDataObject->setDateTime()->setBeginDate('20181020')->setEndDate('20181101');
+$reqDataObject->setDateTime()->setBeginDate('20181104')->setEndDate('20181105');
 $ret = $app->refund->queryByDate($reqDataObject);
 print_r($ret);

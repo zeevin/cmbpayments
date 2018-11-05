@@ -15,6 +15,6 @@ use Zeevin\CmbPayments\Factory;
 $app = Factory::mobile($config);
 
 $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Order\QuerySingle();
-$reqDataObject->setDateTime()->setDate('20181031')->setOrderNo('P2018103116531563180');
+$reqDataObject->setDateTime()->setDate('20181105')->setOrderNo('P2018111050952435098');
 $ret = $app->order->querySingle($reqDataObject);
 print_r($ret);

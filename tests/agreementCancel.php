@@ -18,7 +18,7 @@ $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Agreement\Cancel();
 
 $reqDataObject->setMerchantSerialNo('Q'.random_int(10000000,99999999))
     ->setDateTime()
-    ->setAgrNo('572');
+    ->setAgrNo('163200');
 
 $ret =  $app->agreement->cancel($reqDataObject);
 print_r($ret);
