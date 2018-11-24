@@ -15,7 +15,7 @@ use Zeevin\CmbPayments\Factory;
 $app = Factory::mobile($config);
 
 $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Refund\DoRefund();
-$reqDataObject->setDateTime()->setDate('20181105')->setOrderNo('P201811050956372638')
-    ->setRefundSerialNo('R201811050956372638')->setAmount('3');
+$reqDataObject->setDateTime()->setDate('20181116')->setOrderNo('P201811161204487320')
+    ->setRefundSerialNo('R201811161204487320')->setAmount('92');
 $ret = $app->refund->do($reqDataObject);
 print_r($ret);

@@ -16,9 +16,9 @@ $app = Factory::mobile($config);
 
 $reqDataObject = new \Zeevin\CmbPayments\Kernel\Object\Order\Pay();
 $reqDataObject->setDateTime()->setDate()->setOrderNo('P'.date('YmdHis').random_int(1000,9999))
-    ->setExpireTimeSpan(100)
-    ->setAmount('1')->setPayNoticeUrl('http://47.98.159.146/back.php')->setAgrNo('16320099')
-    ->setMerchantSerialNo('AG1633003444');
-    //->setSignNoticeUrl('http://47.98.159.146/back.php');
+    ->setExpireTimeSpan(1000)
+    ->setAmount('91')->setPayNoticeUrl('http://47.98.159.146/back.php')->setAgrNo('20181115162M0')
+    ->setMerchantSerialNo('G16312110');
+//    ->setSignNoticeUrl('http://47.98.159.146/back.php');
 
 echo $app->order->pay($reqDataObject);
